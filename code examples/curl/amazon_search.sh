@@ -1,0 +1,2 @@
+curl --user user:pass1 'https://realtime.oxylabs.io/v1/queries' -H "Content-Type: application/json"
+ -d '{"source": "amazon_search", "domain": "nl", "query": "adidas", "start_page": 11, "pages": 10, "parse": true, "context" [{"key": "category_id", "value": "16391843031"},{"key": "merchant_id", "value": "3AA17D2BRD4YMT0X"}]}'

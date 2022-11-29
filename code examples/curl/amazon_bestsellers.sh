@@ -1,0 +1,2 @@
+curl --user user:pass1 'https://realtime.oxylabs.io/v1/queries' -H "Content-Type: application/json"
+ -d '{"source": "amazon_bestsellers", "domain": "com", "query": "Clothing, Shoes & Jewelry", "start_page": 2, "parse": true, "context": ["category_id": "6127770011"]}'
