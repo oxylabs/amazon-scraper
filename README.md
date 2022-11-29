@@ -1,1 +1,1 @@
-# amazon-scraper
+# Amazon Scraper
