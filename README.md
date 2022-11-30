@@ -1,5 +1,7 @@
 # Amazon Scraper
 
+Oxylabs’ Amazon Scraper API is an advanced scraping solution designed to collect real-time localized data and search information from Amazon hassle-free. Check out this quick overview of all the available data source values we support with Amazon.
+
 ### Overview
 
 Below is a quick overview of all the available data `source` values we support with Amazon.
