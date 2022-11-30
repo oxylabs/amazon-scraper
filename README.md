@@ -454,6 +454,6 @@ pprint(response.json())
 
 Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
 
-
+Oxylabs' Amazon Scraper API is an ideal option for scraping publicly-available data from any page of Amazon, be that reviews, pricing, or product information. If you want to discuss upgrading to any of our plans or have questions related to Amazon Scraper API, don't hesitate to [get in touch with our sales team!](mailto:hello@oxylabs.io) 
 
 
