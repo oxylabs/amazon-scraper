@@ -1,6 +1,6 @@
 # Amazon Scraper
 
-Oxylabs’ Amazon Scraper API is an advanced scraping solution designed to collect real-time localized data and search information from Amazon hassle-free. Check out this quick overview of all the available data source values we support with Amazon.
+Oxylabs' Amazon Scraper API allows users to easily scrape publicly-available data from any page on Amazon, such as reviews, pricing, and product information. If you're interested in testing out this powerful tool, you can [**sign up for a free trial on the Oxylabs website.**](https://oxylabs.io/products/scraper-api/ecommerce/amazon)
 
 ### Overview
 
@@ -455,5 +455,3 @@ pprint(response.json())
 ```
 
 Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
-
-Oxylabs' Amazon Scraper API is an ideal option for scraping publicly-available data from any page of Amazon, be that reviews, pricing, or product information. If you want to discuss upgrading to any of our plans or have questions related to Amazon Scraper API, don't hesitate to [**get in touch with our sales team!**](mailto:hello@oxylabs.io) 
