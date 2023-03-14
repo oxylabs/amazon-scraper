@@ -65,8 +65,6 @@ pprint(response.json())
 
 To see the response example with retrieved data, download [**this** **sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2FTsZ8TZKgQe4y7BT6DgKg%2Famazon.json?alt=media\&token=be9d00d0-d3e3-443b-be67-26cbdbcabc5d) in JSON format.
 
-Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
-
 ### Search
 
 The `amazon_search` source is designed to retrieve Amazon search result pages.
@@ -128,8 +126,6 @@ pprint(response.json())
 
  To see the response example with retrieved data, download [**this** **sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2Fyg8tdLTqrajAxhtjiuR5%2Famazon\_search.json?alt=media\&token=f02b1ceb-70f6-45cd-9f7c-7247196b2bd6) file in JSON format.
  
-Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
- 
 ### Product
 
 The `amazon_product` data source is designed to retrieve Amazon product pages.
@@ -186,8 +182,6 @@ pprint(response.json())
 
 To see the response example with retrieved data, download [**this** **sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2Fjj4ahNp1FpIqjY2JcSqz%2Famazon\_product.json?alt=media\&token=42016a49-9790-4671-9022-bb0feed79d1a) file in JSON format.
 
-Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
- 
 ### Offer listing
 
 The `amazon_pricing` data source is designed to retrieve Amazon product offer listings.
@@ -240,8 +234,6 @@ pprint(response.json())
 ```
 
 To see what the parsed output looks like, download [**this**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2FhGVtkmLp7gccwTLCJzLY%2Famazon\_pricing.json?alt=media\&token=a30a8253-225f-44c2-880b-850e94e23c21) JSON file.
-
-Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
  
 ### Reviews
 
@@ -294,8 +286,6 @@ pprint(response.json())
 
 To see the response example with retrieved data, download this [**sample** **output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2F4Fx7BNOyFLw4rU6dJGDH%2Famazon\_reviews.json?alt=media\&token=f1845f29-2286-41a3-9ac5-834a89b345c5) file in JSON format.
 
-Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
-
 ### Questions & Answers
 
 The `amazon_questions` data source is designed to retrieve any particular product's Questions & Answers pages.
@@ -344,8 +334,6 @@ pprint(response.json())
 ```
 
 To see the response example with retrieved data, download this [**sample** **output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2F1i8qUTsaifrfTht9VdXK%2Famazon\_questions.json?alt=media\&token=a59d9850-d79b-40bc-a2a6-bdd802eafd6b) file in JSON format.
-
-Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
 
 ### Best Sellers
 
@@ -403,8 +391,6 @@ pprint(response.json())
 
 To see the response example with retrieved data, download this [**sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2Frf2S2YKKlEEhu4cCoW6b%2Famazon\_bestsellers.json?alt=media\&token=6b4b3817-5a6e-4095-96b0-81d8d9d0883f) file in JSON format.
 
-Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
-
 ### Sellers
 
 The `amazon_sellers` data source is designed to retrieve Amazon Sellers pages.&#x20;
@@ -453,5 +439,3 @@ response = requests.request(
 # Print prettified response to stdout.
 pprint(response.json())
 ```
-
-Code examples for other languages can be found [**here.**](https://github.com/oxylabs/amazon-scraper/tree/main/code%20examples)
