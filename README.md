@@ -1,6 +1,6 @@
 # Amazon Scraper
 
-Oxylabs' Amazon Scraper API allows users to easily scrape publicly-available data from any page on Amazon, such as reviews, pricing, and product information. If you're interested in testing out this powerful tool, you can [**sign up for a free trial on the Oxylabs website.**](https://oxylabs.io/products/scraper-api/ecommerce/amazon)
+Oxylabs' Amazon Scraper API allows users to easily scrape publicly-available data from any page on Amazon, such as reviews, pricing, product information and more. If you're interested in testing out this powerful tool, you can [**sign up for a free trial on the Oxylabs website.**](https://oxylabs.io/products/scraper-api/ecommerce/amazon?utm_source=git-internal&utm_medium=github&utm_campaign=repo&utm_content=oxylabs/amazon-scraper)
 
 ### Overview
 
