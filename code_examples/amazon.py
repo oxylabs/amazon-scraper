@@ -5,7 +5,7 @@ from pprint import pprint
 # Structure payload.
 payload = {
     'source': 'amazon',
-    'url': 'https://www.amazon.co.uk/dp/AA12345678',
+    'url': 'https://www.amazon.co.uk/dp/B0BDJ279KF',
     'parse': True
 }
 
@@ -13,7 +13,7 @@ payload = {
 response = requests.request(
     'POST',
     'https://realtime.oxylabs.io/v1/queries',
-    auth=('YOUR_USERNAME', 'YOUR_PASSWORD'), #Your credentials go here
+    auth=('user', 'pass1'),  # Your credentials go here
     json=payload,
 )
 

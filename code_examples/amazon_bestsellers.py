@@ -4,15 +4,13 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_search',
-    'domain': 'nl',
-    'query': 'adidas',
-    'start_page': 11,
-    'pages': 10,
+    'source': 'amazon_bestsellers',
+    'domain': 'de',
+    'query': 'automotive',
+    'start_page': 2,
     'parse': True,
     'context': [
-        {'key': 'category_id', 'value': 16391843031},
-        {'key': 'merchant_id', 'value':'3AA17D2BRD4YMT0X'}
+        {'key': 'category_id', 'value': 82400031},
     ],
 }
 

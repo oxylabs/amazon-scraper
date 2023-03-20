@@ -46,7 +46,7 @@ from pprint import pprint
 # Structure payload.
 payload = {
     'source': 'amazon',
-    'url': 'https://www.amazon.co.uk/dp/AA12345678',
+    'url': 'https://www.amazon.co.uk/dp/B0BDJ279KF',
     'parse': True
 }
 
@@ -159,11 +159,11 @@ from pprint import pprint
 payload = {
     'source': 'amazon_product',
     'domain': 'nl',
-    'query': 'AA12345678',
+    'query': 'B09RX4KS1G',
     'parse': True,
     'context': [
     {
-      'key': 'autoselect_variant', 'value': true
+      'key': 'autoselect_variant', 'value': True
     }],
 }
 
@@ -216,7 +216,7 @@ from pprint import pprint
 payload = {
     'source': 'amazon_pricing',
     'domain': 'nl',
-    'query': 'AA12345678',
+    'query': 'B09RX4KS1G',
     'parse': True,
 }
 
@@ -267,7 +267,7 @@ from pprint import pprint
 payload = {
     'source': 'amazon_reviews',
     'domain': 'nl',
-    'query': 'AA12345678',
+    'query': 'B09RX4KS1G',
     'parse': True,
 }
 
@@ -316,7 +316,7 @@ from pprint import pprint
 payload = {
     'source': 'amazon_questions',
     'domain': 'nl',
-    'query': 'AA12345678',
+    'query': 'B09RX4KS1G',
     'parse': True,
 }
 
@@ -367,12 +367,12 @@ from pprint import pprint
 # Structure payload.
 payload = {
     'source': 'amazon_bestsellers',
-    'domain': 'com',
-    'query': 'Clothing, Shoes & Jewelry',
+    'domain': 'de',
+    'query': 'automotive',
     'start_page': 2,
     'parse': True,
     'context': [
-        {'key': 'category_id', 'value': 6127770011},
+        {'key': 'category_id', 'value': 82400031},
     ],
 }
 
