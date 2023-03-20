@@ -1,19 +1,18 @@
 import requests
 from pprint import pprint
 
-
 # Structure payload.
 payload = {
-    'source': 'amazon_bestsellers',
-    'domain': 'com',
-    'query': 'Clothing, Shoes & Jewelry',
-    'start_page': 2,
+    'source': 'amazon_product',
+    'domain': 'nl',
+    'query': 'B09RX4KS1G',
     'parse': True,
     'context': [
-        {'key': 'category_id', 'value': 6127770011},
+        {
+            'key': 'autoselect_variant', 'value': True
+        },
     ],
 }
-
 
 # Get response.
 response = requests.request(

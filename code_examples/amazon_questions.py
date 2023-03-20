@@ -4,9 +4,9 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_pricing',
+    'source': 'amazon_questions',
     'domain': 'nl',
-    'query': 'AA12345678',
+    'query': 'B09RX4KS1G',
     'parse': True,
 }
 

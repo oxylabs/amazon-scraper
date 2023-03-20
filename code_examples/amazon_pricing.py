@@ -4,10 +4,10 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_sellers',
-    'domain': 'de',
-    'query': 'ABNP0A7Y0QWBN',
-    'parse': True
+    'source': 'amazon_pricing',
+    'domain': 'nl',
+    'query': 'B09RX4KS1G',
+    'parse': True,
 }
 
 

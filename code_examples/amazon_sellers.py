@@ -4,14 +4,10 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_product',
-    'domain': 'nl',
-    'query': 'AA12345678',
-    'parse': True,
-    'context': [
-    {
-      'key': 'autoselect_variant', 'value': true
-    }],
+    'source': 'amazon_sellers',
+    'domain': 'de',
+    'query': 'ABNP0A7Y0QWBN',
+    'parse': True
 }
 
 
