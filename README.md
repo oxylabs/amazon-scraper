@@ -36,7 +36,7 @@ The `amazon` source is designed to retrieve the content from various Amazon URLs
 
 #### Python code example
 
-In the code example below, we make a request to retrieve the Amazon product page for `ASIN AA12345678` .
+In the code example below, we make a request to retrieve the Amazon product page for `B0BDJ279KF` .
 
 ```python
 import requests
@@ -90,7 +90,7 @@ The `amazon_search` source is designed to retrieve Amazon search result pages.
 
 #### Python code example
 
-In the code example below, we make a request to retrieve product page for ASIN `AA12345678`on `amazon.nl` marketplace. In case the ASIN provided is a parent ASIN, we ask Amazon to return a product page of an automatically-selected variation.
+In the code example below, we make a request to retrieve product page for ASIN `3AA17D2BRD4YMT0X` on `amazon.nl` marketplace. In case the ASIN provided is a parent ASIN, we ask Amazon to return a product page of an automatically-selected variation.
 
 ```python
 import requests
@@ -148,7 +148,7 @@ The `amazon_product` data source is designed to retrieve Amazon product pages.
 
 #### Python code example
 
-In the code example below, we make a request to retrieve product page for ASIN `AA12345678`on `amazon.nl` marketplace. In case the ASIN provided is a parent ASIN, we ask Amazon to return a product page of an automatically-selected variation.
+In the code example below, we make a request to retrieve product page for ASIN `B09RX4KS1G`on `amazon.nl` marketplace. In case the ASIN provided is a parent ASIN, we ask Amazon to return a product page of an automatically-selected variation.
 
 ```python
 import requests
@@ -205,7 +205,7 @@ The `amazon_pricing` data source is designed to retrieve Amazon product offer li
 
 #### Python code example
 
-In the code examples below, we make a request to retrieve product offer listing page for ASIN `AA12345678` on `amazon.nl`&#x20; marketplace.
+In the code examples below, we make a request to retrieve product offer listing page for ASIN `B09RX4KS1G` on `amazon.nl`&#x20; marketplace.
 
 ```python
 import requests
