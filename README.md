@@ -2,7 +2,7 @@
 
 [![Amazon_scraper (1)](https://user-images.githubusercontent.com/129506779/249700804-abb11a97-9e0d-4f3c-bf2c-72991e8acd74.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=86) 
 
-Oxylabs' Amazon Scraper API allows users to easily scrape publicly-available data from any page on Amazon, such as reviews, pricing, product information and more. If you're interested in testing out this powerful tool, you can [**sign up for a free trial on the Oxylabs website.**](https://oxylabs.io/products/scraper-api/ecommerce/amazon?utm_source=git-internal&utm_medium=github&utm_campaign=repo&utm_content=oxylabs/amazon-scraper)
+Oxylabs' [Amazon Scraper API](https://oxy.yt/Xahk) allows users to easily scrape publicly-available data from any page on Amazon, such as reviews, pricing, product information and more. If you're interested in testing out this powerful tool, you can [**sign up for a free trial on the Oxylabs website.**](https://oxylabs.io/products/scraper-api/ecommerce/amazon?utm_source=git-internal&utm_medium=github&utm_campaign=repo&utm_content=oxylabs/amazon-scraper)
 
 ### Overview
 
