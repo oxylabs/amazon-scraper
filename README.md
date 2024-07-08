@@ -4,11 +4,13 @@
 
 [![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
 
-Oxylabs' [Amazon Scraper API](https://oxy.yt/Xahk) allows users to easily scrape publicly-available data from any page on Amazon, such as reviews, pricing, product information and more. If you're interested in testing out this powerful tool, you can [**sign up for a free trial on the Oxylabs website.**](https://oxylabs.io/products/scraper-api/ecommerce/amazon?utm_source=git-internal&utm_medium=github&utm_campaign=repo&utm_content=oxylabs/amazon-scraper)
+You can use Oxylabs Amazon Scraper API to get publicly-available data from any page on Amazon (reviews, pricing, product information, etc.) To access the tool, you'll need a paid subscription or you may get a **7-day free trial** – claim it [here](https://oxy.yt/Xahk). Once you have an active plan, 
+
+Below you'll find a tutorial on using the API to extract public Amazon data. 
 
 ### Overview
 
-Below is a quick overview of all the available data `source` values we support with Amazon.
+Here is a quick overview of all the available data `source` values we support with Amazon: 
 
 | Source               | Description                                                  | Structured data     |
 | -------------------- | ------------------------------------------------------------ | ------------------- |
@@ -23,7 +25,7 @@ Below is a quick overview of all the available data `source` values we support w
 
 ### URL
 
-The `amazon` source is designed to retrieve the content from various Amazon URLs. Instead of sending multiple parameters, you can provide us with a direct URL to the required Amazon page. We do not strip any parameters or alter your URLs in any way.
+The `amazon` source is designed to retrieve the content from various Amazon URLs. Instead of sending multiple parameters, you can provide us with a direct URL to the required Amazon page. We don't strip any parameters or alter your URLs in any way.
 
 #### **Query parameters**
 
@@ -128,7 +130,7 @@ response = requests.request(
 pprint(response.json())
 ```
 
- To see the response example with retrieved data, download [**this** **sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2Fyg8tdLTqrajAxhtjiuR5%2Famazon\_search.json?alt=media\&token=f02b1ceb-70f6-45cd-9f7c-7247196b2bd6) file in JSON format.
+To see the response example with retrieved data, download [**this** **sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2Fyg8tdLTqrajAxhtjiuR5%2Famazon\_search.json?alt=media\&token=f02b1ceb-70f6-45cd-9f7c-7247196b2bd6) file in JSON format.
  
 ### Product
 
