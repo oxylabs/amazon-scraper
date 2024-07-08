@@ -445,5 +445,3 @@ response = requests.request(
 # Print prettified response to stdout.
 pprint(response.json())
 ```
-
-Also, check this tutorial on [pypi](https://pypi.org/project/amazon-scraper-api/)
