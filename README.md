@@ -4,8 +4,7 @@
 
 [![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
 
-You can use Oxylabs Amazon Scraper API to get publicly-available data from any page on Amazon (reviews, pricing, product information, etc.) To access the tool, you'll need a paid subscription or you may get a **7-day free trial** – claim it [here](https://oxy.yt/Xahk). 
-
+You can use Oxylabs Amazon Scraper API to get publicly-available data from any page on Amazon (reviews, pricing, product information, etc.) To access the tool, you'll need a paid subscription or the **7-day free trial** – claim it [here](https://oxy.yt/Xahk). 
 
 ### Overview
 
