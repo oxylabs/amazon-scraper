@@ -144,12 +144,12 @@ class AmazonScraper:
                 parsed_product = self._parse_product_data(product)
             except MissingProductDataError:
                 self._logger.error(
-                    "Couldn't parse required data for product. Skipping.."
+                    "Couldn't get all required data for product. Skipping.."
                 )
                 continue
             except Exception:
                 self._logger.error(
-                    "Unable to parse required data for product. Skipping.."
+                    "Uexpected error when parsing data for product. Skipping.."
                 )
                 continue
             else:
