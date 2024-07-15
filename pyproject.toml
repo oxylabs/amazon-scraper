@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "amazon-scraper"
+version = "0.1.0"
+description = "A tool for scraping Amazon."
+packages = [
+    { include = "amazon_scraper", from = "src" },
+]
+authors = ["Ignas Šimkūnas <ignassimkunas@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.7.4"
+click = "^8.1.7"
+pandas = "^2.2.2"
+selenium = "^4.22.0"
+webdriver-manager = "^4.0.1"
+pydantic-settings = "^2.3.4"
+selenium-wire = "^5.1.0"
+blinker="<1.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+files = "."
+ignore_missing_imports = true
+follow_imports = "silent"
+show_error_codes = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
+disallow_incomplete_defs = true
+
+[tool.isort]
+py_version = 311
+combine_as_imports = true
+profile = "black"
+lines_between_types = 1
+lines_after_imports = 2
