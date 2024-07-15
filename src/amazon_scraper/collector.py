@@ -11,6 +11,7 @@ import pandas as pd
 from amazon_scraper.models import Product
 from amazon_scraper.scraper import AmazonScraper
 
+
 DEFAULT_OUTPUT_FILE = "amazon_products.csv"
 
 

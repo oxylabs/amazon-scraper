@@ -2,18 +2,19 @@
     Module for scraping Amazon product pages.
 """
 
-from enum import Enum
 import logging
 import time
+
+from enum import Enum
 from typing import List
 
-from seleniumwire import webdriver
-from seleniumwire.request import Request
-from selenium.webdriver.remote.webelement import WebElement
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.remote.webelement import WebElement
+from seleniumwire import webdriver
+from seleniumwire.request import Request
 from webdriver_manager.chrome import ChromeDriverManager
 
 from amazon_scraper.models import Product
@@ -143,12 +144,12 @@ class AmazonScraper:
                 parsed_product = self._parse_product_data(product)
             except MissingProductDataError:
                 self._logger.error(
-                    f"Couldn't parse required data for product. Skipping.."
+                    "Couldn't parse required data for product. Skipping.."
                 )
                 continue
             except Exception:
                 self._logger.error(
-                    f"Unable to parse required data for product. Skipping.."
+                    "Unable to parse required data for product. Skipping.."
                 )
                 continue
             else:
@@ -166,7 +167,7 @@ class AmazonScraper:
             DriverInitializationError: If the Chrome webdriver cannot be initialized.
             DriverGetProductsError: If the Amazon product data cannot be scraped from the Amazon site.
         """
-        self._logger.info(f"Scraping Amazon product data..")
+        self._logger.info("Scraping Amazon product data..")
 
         try:
             driver = self._init_chrome_driver()
