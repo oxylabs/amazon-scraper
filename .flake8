@@ -1,0 +1,26 @@
+[flake8]
+min_python_version = 3.11
+max-line-length = 88
+ban-relative-imports = true
+format-greedy = 1
+inline-quotes = double
+mypy-init-return = true
+enable-extensions = TC, TC1
+type-checking-exempt-modules = typing, typing-extensions
+eradicate-whitelist-extend = ^-.*;
+extend-ignore =
+    E203,
+    SIM106,
+    E501,
+    INP001,
+    W503,
+    ANN001,
+    ANN201,
+    ANN002,
+    ANN003,
+    ANN101,
+    ANN102,
+    ANN204,
+    ANN205,
+    FS001,
+    SIM119,
