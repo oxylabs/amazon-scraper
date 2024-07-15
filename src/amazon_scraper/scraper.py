@@ -110,9 +110,8 @@ class AmazonScraper:
 
         asin_code = product.get_attribute("data-asin")
 
-        image_url = product.find_element(
-            By.XPATH, ProductXPath.IMAGE_URL
-        ).get_attribute("src")
+        image_element = product.find_element(By.XPATH, ProductXPath.IMAGE_URL)
+        image_url = image_element.get_attribute("src") if image_element else None
 
         price = self._parse_price_for_product(product)
         if not price:
@@ -120,7 +119,7 @@ class AmazonScraper:
                 f"Price not found for product {title}. Likely out of stock."
             )
 
-        if not all((title, url, asin_code, price, image_url)):
+        if not all((title, url, asin_code, image_url)):
             raise MissingProductDataError
 
         return Product(
