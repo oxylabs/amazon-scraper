@@ -4,8 +4,6 @@
 
 [![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
 
-You can use Oxylabs Amazon Scraper API to get publicly-available data from any page on Amazon (reviews, pricing, product information, etc.) To access the tool, you'll need a paid subscription or the **7-day free trial** – claim it [here](https://oxy.yt/Xahk). 
-
 ### Free Amazon Scraper
 
 A free tool used to get Amazon product data for any provided Amazon department page.
@@ -68,7 +66,9 @@ The data should look something like this:
 
 In case the code doesn't work or your project is of bigger scale, please refer to the second part of the tutorial. There, we showcase how to scrape public data with Oxylabs Scraper API.
 
-### Overview
+### Scraping with Oxylabs API
+
+Alternatively, you can use Oxylabs Amazon Scraper API to get publicly-available data from any page on Amazon (reviews, pricing, product information, etc.) To access the tool, you'll need a paid subscription or the **7-day free trial** – claim it [here](https://oxy.yt/Xahk). 
 
 Here is a quick overview of all the available data `source` values we support with Amazon: 
 
