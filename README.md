@@ -1,8 +1,25 @@
-# Amazon Scraper
-
 [![Amazon_scraper (1)](https://user-images.githubusercontent.com/129506779/249700804-abb11a97-9e0d-4f3c-bf2c-72991e8acd74.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=86) 
 
 [![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
+
+# Amazon Scraper
+
+- [Free Amazon Scraper](#free-amazon-scraper)
+    + [Prerequisites](#prerequisites)
+    + [Installation](#installation)
+    + [Retrieving the URL of an Amazon page to scrape](#retrieving-the-url-of-an-amazon-page-to-scrape)
+    + [Scraping Amazon product data](#scraping-amazon-product-data)
+    + [Retrieved data](#retrieved-data)
+    + [Notes](#notes)
+- [Scraping with Oxylabs API](#scraping-with-oxylabs-api)
+    + [URL](#url)
+    + [Search](#search)
+    + [Product](#product)
+    + [Offer listing](#offer-listing)
+    + [Reviews](#reviews)
+    + [Questions and Answers](#questions-and-answers)
+    + [Best Sellers](#best-sellers)
+    + [Sellers](#sellers)
 
 ### Free Amazon Scraper
 
@@ -352,7 +369,7 @@ pprint(response.json())
 
 To see the response example with retrieved data, download this [**sample** **output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2F4Fx7BNOyFLw4rU6dJGDH%2Famazon\_reviews.json?alt=media\&token=f1845f29-2286-41a3-9ac5-834a89b345c5) file in JSON format.
 
-### Questions & Answers
+### Questions and Answers
 
 The `amazon_questions` data source is designed to retrieve any particular product's Questions & Answers pages.
 
