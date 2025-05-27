@@ -525,3 +525,18 @@ pprint(response.json())
 Check out our list of [Best Web Scraping Tools](https://medium.com/@oxylabs.io/top-12-best-web-scraping-tools-for-2024-ba5deb1b3851)
 
 Looking to scrape more other Amazon data? [Amazon Review Scraper](https://github.com/oxylabs/amazon-review-scraper), [Amazon ASIN Scraper](https://github.com/oxylabs/amazon-asin-scraper), [Bypass Amazon CAPTCHA](https://github.com/oxylabs/how-to-bypass-amazon-captcha), [How to Scrape Amazon Prices](https://github.com/oxylabs/how-to-scrape-amazon-prices), [Scraping Amazon Product Data](https://github.com/oxylabs/how-to-scrape-amazon-product-data)
+
+### Featured in Technical Communities
+We’re excited to see that our content and tools are being referenced by developers and technical writers across platforms!
+
+* [How To Web Scrape Amazon Using Python](https://medium.com/@simon.dalton.349/how-to-web-scrape-amazon-df92ddf11fc9)
+
+* [How to Bypass Amazon CAPTCHA When Scraping](https://medium.com/@lambert.watts.809/how-to-bypass-amazon-captcha-when-scraping-fec20546abf9)
+
+* [Best 10 Free Proxy Providers in 2025](https://medium.com/@lambert.watts.809/best-10-free-proxy-providers-dd78cd93fc04)
+
+  ## Contacts
+Email - hello@oxylabs.io 
+
+Drop a message - <br><a href="https://oxylabs.drift.click/oxybot">Live chat</a>
+
