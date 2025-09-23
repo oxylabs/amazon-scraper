@@ -1,6 +1,6 @@
 [![Amazon_scraper (1)](https://raw.githubusercontent.com/oxylabs/amazon-scraper/refs/heads/main/Scrape%20Amazon%20data%20with%20Web%20Scraper%20API.png)](https://oxylabs.io/products/scraper-api/ecommerce/amazon?utm_source=877&utm_medium=affiliate&groupid=877&utm_content=amazon-scraper-github&transaction_id=102f49063ab94276ae8f116d224b67) 
 
-[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.com/invite/Pds3gBmKMH)
+[![](https://dcbadge.limes.pink/api/server/Pds3gBmKMH?style=for-the-badge&theme=discord)](https://discord.gg/Pds3gBmKMH) [![YouTube](https://img.shields.io/badge/YouTube-Oxylabs-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@oxylabs)
 
 # Amazon Scraper
 
