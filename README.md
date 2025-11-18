@@ -16,7 +16,6 @@
     + [Search](#search)
     + [Product](#product)
     + [Offer listing](#offer-listing)
-    + [Reviews](#reviews)
     + [Questions and Answers](#questions-and-answers)
     + [Best Sellers](#best-sellers)
     + [Sellers](#sellers)
@@ -85,7 +84,7 @@ In case the code doesn't work or your project is of bigger scale, please refer t
 
 ### Scraping with Oxylabs API
 
-Alternatively, you can use Oxylabs Amazon Scraper API to get publicly-available data from any page on Amazon (reviews, pricing, product information, etc.) To access the tool, you'll need a paid subscription or the **7-day free trial** – claim it [here](https://oxy.yt/Xahk). 
+Alternatively, you can use Oxylabs Amazon Scraper API to get publicly-available data from any page on Amazon (pricing, product information, etc.) To access the tool, you'll need a paid subscription or the **7-day free trial** – claim it [here](https://oxy.yt/Xahk). 
 
 Here is a quick overview of all the available data `source` values we support with Amazon: 
 
@@ -96,7 +95,6 @@ Here is a quick overview of all the available data `source` values we support wi
 | `amazon_pricing`     | List of offers available for an ASIN of your choice.         | Yes.                |
 | `amazon_product`     | Product page of an ASIN of your choice.                      | Yes.                |
 | `amazon_questions`   | Q\&A page of an ASIN of your choice.                         | Yes.                |
-| `amazon_reviews`     | Reviews page of an ASIN of your choice.                      | Yes.                |
 | `amazon_search`      | Search results for a search term of your choice.             | Yes.                |
 | `amazon_sellers`     | Seller information of a seller of your choice.               | Yes.                |
 
@@ -319,57 +317,6 @@ pprint(response.json())
 ```
 
 To see what the parsed output looks like, download [**this**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2FhGVtkmLp7gccwTLCJzLY%2Famazon\_pricing.json?alt=media\&token=a30a8253-225f-44c2-880b-850e94e23c21) JSON file.
- 
-### Reviews
-
-The `amazon_reviews` data source is designed to retrieve Amazon product review pages of an ASIN of your choice.
-
-#### Query parameters
-
-| Parameter                                                   | Description                                                                                                                                       | Default Value    |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-|  <mark style="background-color:green;">**`source`**</mark>  | Data source.                                              | `amazon_reviews` |
-| `domain`                                                    | Domain localization for Amazon. The full list of available domains can be found [**here**](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/features/domain-locale-results-language#domain).                           | `com`            |
-|  <mark style="background-color:green;">**`query`**</mark>   | 10-symbol ASIN code                                                                                                                               | -                |
-| `geo_location`                                              | The _Deliver to_ location. See our guide to using this parameter [**here**](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/features/geo-location#amazon).                                   | -                |
-| `user_agent_type`                                           | Device type and browser. The full list can be found [**here**](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/features/user-agent-type). | `desktop`        |
-| `start_page`                                                | Starting page number                                                                                                                              | `1`              |
-| `pages`                                                     | Number of pages to retrieve                                                                                                                       | `1`              |
-| `render`                                                    | Enables JavaScript rendering. [**More info.**](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/features/javascript-rendering)                         |                  |
-| `callback_url`                                              | URL to your callback endpoint. [**More info**](https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/integration-methods/push-pull#callback).                     | -                |
-| `parse`                                                     | `true` will return structured data.                                  | -                |
-
-&#x20;   <mark style="background-color:green;"></mark> - required parameter
-
-#### Python code example
-
-```python
-import requests
-from pprint import pprint
-
-
-# Structure payload.
-payload = {
-    'source': 'amazon_reviews',
-    'domain': 'nl',
-    'query': 'B09RX4KS1G',
-    'parse': True,
-}
-
-
-# Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
-    json=payload,
-)
-
-# Print prettified response to stdout.
-pprint(response.json())
-```
-
-To see the response example with retrieved data, download this [**sample** **output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2F4Fx7BNOyFLw4rU6dJGDH%2Famazon\_reviews.json?alt=media\&token=f1845f29-2286-41a3-9ac5-834a89b345c5) file in JSON format.
 
 ### Questions and Answers
 
@@ -526,7 +473,7 @@ pprint(response.json())
 ```
 Check out our list of [Best Web Scraping Tools](https://medium.com/@oxylabs.io/top-12-best-web-scraping-tools-for-2025-ba5deb1b3851)
 
-Looking to scrape more other Amazon data? [Amazon Review Scraper](https://github.com/oxylabs/amazon-review-scraper), [Amazon ASIN Scraper](https://github.com/oxylabs/amazon-asin-scraper), [Bypass Amazon CAPTCHA](https://github.com/oxylabs/how-to-bypass-amazon-captcha), [How to Scrape Amazon Prices](https://github.com/oxylabs/how-to-scrape-amazon-prices), [Scraping Amazon Product Data](https://github.com/oxylabs/how-to-scrape-amazon-product-data)
+Looking to scrape more other Amazon data? [Amazon ASIN Scraper](https://github.com/oxylabs/amazon-asin-scraper), [Bypass Amazon CAPTCHA](https://github.com/oxylabs/how-to-bypass-amazon-captcha), [How to Scrape Amazon Prices](https://github.com/oxylabs/how-to-scrape-amazon-prices), [Scraping Amazon Product Data](https://github.com/oxylabs/how-to-scrape-amazon-product-data)
 
 ### Featured in Technical Communities
 We’re excited to see that our content and tools are being referenced by developers and technical writers across platforms!
