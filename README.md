@@ -485,7 +485,7 @@ We’re excited to see that our content and tools are being referenced by develo
 * [Best 10 Free Proxy Providers in 2025](https://medium.com/@lambert.watts.809/best-10-free-proxy-providers-dd78cd93fc04)
 
 ### Contacts
-Email - hello@oxylabs.io 
+Email - support@oxylabs.io
 
-Drop a message - <br><a href="https://oxylabs.drift.click/oxybot">Live chat</a>
+Drop a message - live chat, accessible via [Oxylabs Dashboard](https://dashboard.oxylabs.io/en/)
 
