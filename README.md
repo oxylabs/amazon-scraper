@@ -84,7 +84,9 @@ In case the code doesn't work or your project is of bigger scale, please refer t
 
 ### Scraping with Oxylabs API
 
-Alternatively, you can use Oxylabs Amazon Scraper API to get publicly-available data from any page on Amazon (pricing, product information, etc.) To access the tool, you'll need a paid subscription or the **7-day free trial** – claim it [here](https://oxy.yt/Xahk). 
+Alternatively, you can use Oxylabs Amazon Scraper API (part of Web Scraper API) to get publicly-available data from any page on Amazon (pricing, product information, etc.) with simple API requests. 
+
+This all-in-one solution is designed to handle Amazon’s anti-bot systems via fast-adapting infrastructure, which automates proxy rotation, unblocking, and parsing to get real-time structured data. To start scraping any public website at scale, claim a free trial [here](https://oxy.yt/Xahk). 
 
 Here is a quick overview of all the available data `source` values we support with Amazon: 
 
