@@ -475,7 +475,7 @@ pprint(response.json())
 ```
 Check out our list of [Best Web Scraping Tools](https://medium.com/@oxylabs.io/top-12-best-web-scraping-tools-for-2025-ba5deb1b3851)
 
-Looking to scrape more other Amazon data? [Amazon ASIN Scraper](https://github.com/oxylabs/amazon-asin-scraper), [Handle Amazon CAPTCHA](https://github.com/oxylabs/how-to-handle-amazon-captcha), [How to Scrape Amazon Prices](https://github.com/oxylabs/how-to-scrape-amazon-prices), [Scraping Amazon Product Data](https://github.com/oxylabs/how-to-scrape-amazon-product-data)
+Looking to scrape more other Amazon data? [Amazon ASIN Scraper](https://github.com/oxylabs/amazon-asin-scraper), [Handle Amazon CAPTCHA](https://github.com/oxylabs/how-to-bypass-amazon-captcha), [How to Scrape Amazon Prices](https://github.com/oxylabs/how-to-scrape-amazon-prices), [Scraping Amazon Product Data](https://github.com/oxylabs/how-to-scrape-amazon-product-data)
 
 ### Featured in Technical Communities
 We’re excited to see that our content and tools are being referenced by developers and technical writers across platforms!
