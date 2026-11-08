@@ -1,24 +1,19 @@
 import requests
 from pprint import pprint
 
+
 # Structure payload.
 payload = {
-    'source': 'amazon_product',
-    'domain': 'nl',
     'query': 'B09RX4KS1G',
-    'parse': True,
-    'context': [
-        {
-            'key': 'autoselect_variant', 'value': True
-        },
-    ],
+    'domain': 'nl',
+    'autoselect_variant': True,
+    'output': ['json'],
 }
 
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/product',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
