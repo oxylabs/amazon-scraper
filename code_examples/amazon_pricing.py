@@ -4,18 +4,15 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_pricing',
-    'domain': 'nl',
     'query': 'B09RX4KS1G',
-    'parse': True,
+    'domain': 'nl',
+    'output': ['json'],
 }
 
-
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/pricing',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
