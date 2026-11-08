@@ -4,19 +4,16 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon',
     'url': 'https://www.amazon.co.uk/dp/B0BDJ279KF',
-    'parse': True
+    'output': ['json'],
 }
 
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),  # Your credentials go here
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
-# Instead of response with job status and results url, this will return the
-# JSON response with results.
+# Print prettified response to stdout.
 pprint(response.json())
