@@ -4,22 +4,17 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_bestsellers',
-    'domain': 'de',
     'query': 'automotive',
+    'domain': 'de',
     'start_page': 2,
-    'parse': True,
-    'context': [
-        {'key': 'category_id', 'value': 82400031},
-    ],
+    'category_id': '82400031',
+    'output': ['json'],
 }
 
-
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/bestsellers',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
