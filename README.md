@@ -1,26 +1,44 @@
-[![Amazon_scraper (1)](https://raw.githubusercontent.com/oxylabs/amazon-scraper/refs/heads/main/Scrape%20Amazon%20data%20with%20Web%20Scraper%20API.png)](https://oxylabs.io/products/scraper-api/ecommerce/amazon?utm_source=877&utm_medium=affiliate&groupid=877&utm_content=amazon-scraper-github&transaction_id=102f49063ab94276ae8f116d224b67) 
+[![Amazon_scraper](https://github.com/oxylabs/amazon-scraper/blob/main/amazon-scraper-github-banner.png)](https://oxylabs.io/products/web-api/scrape/ecommerce/amazon) 
 
-[![](https://dcbadge.limes.pink/api/server/Pds3gBmKMH?style=for-the-badge&theme=discord)](https://discord.gg/Pds3gBmKMH) [![YouTube](https://img.shields.io/badge/YouTube-Oxylabs-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@oxylabs)
+<a href="https://oxylabs.io"><img src="https://img.shields.io/badge/🚀_Get_Started-FF6B35?style=for-the-badge" alt="Get started"></a>
+<a href="https://developers.oxylabs.io"><img src="https://img.shields.io/badge/📚_Documentation-4A90E2?style=for-the-badge" alt="Documentation"></a>
+<a href="https://dashboard.oxylabs.io"><img src="https://img.shields.io/badge/📊_Dashboard-2EA44F?style=for-the-badge" alt="Dashboard"></a>
+<a href="https://discord.gg/YOUR-INVITE"><img src="https://img.shields.io/badge/💬_Discord-5865F2?style=for-the-badge" alt="Discord"></a>
+<a href="https://www.youtube.com/@oxylabs"><img src="https://img.shields.io/badge/▶️_YouTube-FF0000?style=for-the-badge" alt="YouTube"></a>
 
 # Amazon Scraper
 
+- [What does an Amazon scraper do?](#what-does-an-amazon-scraper-do)
 - [Free Amazon Scraper](#free-amazon-scraper)
-    + [Prerequisites](#prerequisites)
-    + [Installation](#installation)
-    + [Retrieving the URL of an Amazon page to scrape](#retrieving-the-url-of-an-amazon-page-to-scrape)
-    + [Scraping Amazon product data](#scraping-amazon-product-data)
-    + [Retrieved data](#retrieved-data)
-    + [Notes](#notes)
-- [Scraping with Oxylabs API](#scraping-with-oxylabs-api)
-    + [URL](#url)
-    + [Search](#search)
-    + [Product](#product)
-    + [Offer listing](#offer-listing)
-    + [Questions and Answers](#questions-and-answers)
-    + [Best Sellers](#best-sellers)
-    + [Sellers](#sellers)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Retrieving the URL of an Amazon page to scrape](#retrieving-the-url-of-an-amazon-page-to-scrape)
+  - [Scraping Amazon product data](#scraping-amazon-product-data)
+  - [Retrieved data](#retrieved-data)
+  - [Notes](#notes)
+- [Scraping Amazon with Oxylabs Web API](#scraping-with-oxylabs-web-api)
+  - [URL](#url)
+  - [Search](#search)
+  - [Product](#product)
+  - [Offer listing](#offer-listing)
+  - [Best Sellers](#best-sellers)
+  - [Sellers](#sellers)
+- [Practical use cases](#practical-use-cases)
+- [Why choose Oxylabs](#why-choose-oxylabs)
+- [FAQ](#faq)
+- [Learn more](#learn-more) 
+- [Contact us](#contact-us)
 
-### Free Amazon Scraper
+## What does an Amazon scraper do?
+
+An Amazon scraper automatically collects publicly available data from Amazon pages, so you don't have to copy it by hand. Give it a URL, an ASIN, a search term or a seller ID, and it returns structured Amazon product data such as the title, price, ASIN and image URL.
+
+This page covers two ways to scrape Amazon:
+
+- **Free Amazon Scraper:** an open-source Python tool that saves Amazon product data from any department page to a CSV file. Best for small, one-off jobs.
+- **Oxylabs Web API:** a managed service that handles proxy rotation, request management and parsing, and returns real-time structured data from Amazon at scale.
+
+## Free Amazon Scraper
 
 A free tool used to get Amazon product data for any provided Amazon department page.
 
@@ -32,13 +50,15 @@ To run this tool, you need to have Python 3.11 installed in your system.
 
 Open up a terminal window, navigate to this repository and run this command:
 
-```make install```
+```bash
+make install
+```
 
 ### Retrieving the URL of an Amazon page to scrape
 
-First off, open up Amazon and select a department from which you want to scrape. 
+First off, open up Amazon and select a department from which you want to scrape.
 
-For this example, we'll be using the `Computers & Accessories` department.
+For this example, we'll be using the Computers & Accessories department.
 
 <img width="1014" alt="image" src="https://github.com/user-attachments/assets/36fb8ec6-b678-4c6d-8fa1-12801dee6135">
 
@@ -48,11 +68,15 @@ After the page loads, simply copy the URL in the browser and save it. We'll need
 
 To get data for products listed on the department page you chose, simply run this command in your terminal:
 
-```make scrape URL="<amazon_department_page_url>"```
+```bash
+make scrape URL="<amazon_department_page_url>"
+```
 
 With the URL we retrieved earlier, the command would look like this:
 
-```make scrape URL="https://www.amazon.com/s?i=specialty-aps&bbn=16225009011&rh=n%3A%2116225009011%2Cn%3A541966&ref=nav_em__nav_desktop_sa_intl_computers_and_accessories_0_2_5_6"```
+```bash
+make scrape URL="https://www.amazon.com/s?i=specialty-aps&bbn=16225009011&rh=n%3A%2116225009011%2Cn%3A541966&ref=nav_em__nav_desktop_sa_intl_computers_and_accessories_0_2_5_6"
+```
 
 Make sure to surround the URL with quotation marks, otherwise the tool might have trouble parsing it.
 
@@ -64,7 +88,7 @@ If a listed product is out of stock, the tool will notify you with a message, as
 
 ### Retrieved data
 
-After the tool has finished running, you should see a file named `amazon_products.csv` in your directory.
+After the tool has finished running, you should see a file named amazon_products.csv in your directory.
 
 The generated CSV file contains data with these columns inside it:
 
@@ -80,46 +104,87 @@ The data should look something like this:
 
 ### Notes
 
-In case the code doesn't work or your project is of bigger scale, please refer to the second part of the tutorial. There, we showcase how to scrape public data with Oxylabs Scraper API.
+In case the code doesn't work or your project is of bigger scale, please refer to the second part of the tutorial. There, we showcase how to scrape public data with Oxylabs Web API.
 
-### Scraping with Oxylabs API
+## Scraping with Oxylabs Web API
 
-Alternatively, you can use Oxylabs Amazon Scraper API (part of Web Scraper API) to get publicly-available data from any page on Amazon (pricing, product information, etc.) with simple API requests. 
+Alternatively, you can use Oxylabs Amazon Scraper API (part of [Web API](https://oxylabs.io/products/web-api/scrape/ecommerce/amazon)) to get publicly-available data from any page on Amazon (pricing, product information, etc.) with simple API requests.
 
-This all-in-one solution is designed to handle Amazon’s automated request management systems via fast-adapting infrastructure, which automates proxy rotation, web access management, and parsing to get real-time structured data. To start scraping any public website at scale, claim a free trial [here](https://oxy.yt/Xahk). 
+This all-in-one solution is designed to handle Amazon's automated request management systems via fast-adapting infrastructure, which automates proxy rotation, web access management, and parsing to get real-time structured data. To start scraping any public website at scale, create a free account and claim $5 welcome credit [here](https://dashboard.oxylabs.io/).
 
-Here is a quick overview of all the available data `source` values we support with Amazon: 
+Each Amazon target has its own endpoint under `https://webapi.oxylabs.io/v1/scrape/amazon`. Send your API key in the `Authorization` header, put the ASIN, search term or URL in the payload, and set `output` to `["json"]` to get parsed fields instead of raw HTML. Every endpoint works in sync, async and batch modes.
 
-| Source               | Description                                                  | Structured data     |
-| -------------------- | ------------------------------------------------------------ | ------------------- |
-| `amazon`             | Submit any Amazon URL you like.                              | Depends on the URL. |
-| `amazon_bestsellers` | List of best seller items in a taxonomy node of your choice. | Yes                 |
-| `amazon_pricing`     | List of offers available for an ASIN of your choice.         | Yes.                |
-| `amazon_product`     | Product page of an ASIN of your choice.                      | Yes.                |
-| `amazon_questions`   | Q\&A page of an ASIN of your choice.                         | Yes.                |
-| `amazon_search`      | Search results for a search term of your choice.             | Yes.                |
-| `amazon_sellers`     | Seller information of a seller of your choice.               | Yes.                |
+The example below requests the Amazon product page for ASIN B0935DN1BN from the German marketplace (amazon.de), with delivery location 10115 and prices in EUR:
+
+```python
+import requests
+from pprint import pprint
+
+
+# Structure payload.
+payload = {
+    'query': 'B0935DN1BN',
+    'domain': 'de',
+    'location': '10115',
+    'currency': 'EUR',
+    'output': ['json'],
+}
+
+# Get response.
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/product',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
+    json=payload,
+)
+
+# Print prettified response to stdout.
+pprint(response.json())
+```
+
+Here is a quick overview of all the available endpoints we support with Amazon:
+
+| Endpoint.                       | Description                                             | Structured data    |
+| ------------------------------- | ------------------------------------------------------- | ------------------ |
+| `/v1/scrape/amazon`             | Submit any Amazon URL you like.                         | Depends on the URL |
+| `/v1/scrape/amazon/bestsellers` | List of best seller items in a category of your choice. | Yes                |
+| `/v1/scrape/amazon/pricing`     | List of offers available for an ASIN of your choice.    | Yes                |
+| `/v1/scrape/amazon/product`     | Product page of an ASIN of your choice.                 | Yes                |
+| `/v1/scrape/amazon/search`      | Search results for a search term of your choice.        | Yes                |
+| `/v1/scrape/amazon/sellers`.    | Seller information of a seller of your choice.          | Yes                |
+
+Besides the target-specific parameters in the sections below, every Amazon endpoint accepts these common parameters. See the full [Amazon API reference](https://developers.oxylabs.io/api-reference/dedicated-scrapers/commerce-scrapers#amazon) for details.
+
+| Parameter.      | Description                                | Type           |
+| --------------- | ------------------------------------------ | -------------- |
+| `output`        | Formats to return: `markdown`, `html`, `json`, `screenshot`. Default `["html"]`. `json` returns parsed fields. `screenshot` requires `run_js: true`. | array of strings |
+| `json`          | Custom extraction: `{"prompt": string}` or `{"schema": object}`, never both. Overrides the built-in parser. | object |
+| `location`      | Delivery postal code, e.g. `10115`. Must belong to the marketplace set by `domain`. | string |
+| `device`        | `desktop` (default) or `mobile`. | string |
+| `run_js`        | Executes page JavaScript before capture. Slower, so use a client timeout of 150 seconds or more. | boolean |
+| `callback_url`  | Webhook URL for the finished job. Async only. | string |
+| `storage`       | Delivers the result to a bucket instead of the response: `{"type": string, "url": string}`. `type` is `s3`, `s3_gzip`, `s3_compatible`, `gcs` or `tos`. Async only. | object |
 
 ### URL
 
-The `amazon` source is designed to retrieve the content from various Amazon URLs. Instead of sending multiple parameters, you can provide us with a direct URL to the required Amazon page. We don't strip any parameters or alter your URLs in any way.
+The `/v1/scrape/amazon` endpoint is designed to retrieve the content from various Amazon URLs. Instead of sending multiple parameters, you can provide us with a direct URL to the required Amazon page. Send it unchanged, because query string parameters select the variant and price.
 
-#### **Query parameters**
+**Query parameters**
 
-| Parameter                                                   | Description                                                                                                                                       | Default Value |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-|  <mark style="background-color:green;">**`source`**</mark>  | Data source.                                              | `amazon`           |
-|  <mark style="background-color:green;">**`url`**</mark>     | Direct URL (link) to Amazon page                                                                                                                  | -             |
-| `user_agent_type`                                           | Device type and browser. The full list can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/http-context-and-job-management/user-agent-type). | `desktop`     |
-| `render`                                                    | Enables JavaScript rendering. [**More info.**](https://developers.oxylabs.io/products/web-scraper-api/features/js-rendering-and-browser-control)                         | -             |
-| `callback_url`                                              | URL to your callback endpoint. [**More info**](https://developers.oxylabs.io/products/web-scraper-api/integration-methods/push-pull).                     | -             |
-| `parse`                                                     | `true` will return structured data, as long as the URL submitted is for one of the [page types we can parse](https://developers.oxylabs.io/api-targets/e-commerce/amazon).                                       | `false`       |
+| Parameter | Description | Type |
+| --- | --- | --- |
+| <mark style="background-color:green;">**`url`**</mark>* | A URL on any Amazon marketplace. Send it unchanged: query string parameters select the variant and price. | string |
+| `autoselect_variant` | Follows the listing's default variant instead of returning the bare parent listing. Set when a parent ASIN returns no price. | boolean |
+| `check_empty_geo` | Fails the request instead of returning content that ignored location. | boolean |
+| `currency` | Currency to report prices in, e.g. `EUR`. | string |
+| `locale` | Interface language, e.g. `en_US`. | string |
 
-&#x20;   <mark style="background-color:green;"></mark> - required parameter
+/* required parameter
 
-#### Python code example
+The endpoint also accepts the common parameters above and the search filters listed under Search.
 
-In the code example below, we make a request to retrieve the Amazon product page for `B0BDJ279KF` .
+**Python code example**
+
+In the code example below, we make a request to retrieve the Amazon product page for B0BDJ279KF.
 
 ```python
 import requests
@@ -128,54 +193,49 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon',
     'url': 'https://www.amazon.co.uk/dp/B0BDJ279KF',
-    'parse': True
+    'output': ['json'],
 }
 
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('YOUR_USERNAME', 'YOUR_PASSWORD'), #Your credentials go here
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
-# Instead of response with job status and results url, this will return the
-# JSON response with results.
+# Print prettified response to stdout.
 pprint(response.json())
 ```
-
-To see the response example with retrieved data, download [**this** **sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2FTsZ8TZKgQe4y7BT6DgKg%2Famazon.json?alt=media\&token=be9d00d0-d3e3-443b-be67-26cbdbcabc5d) in JSON format.
 
 ### Search
 
-The `amazon_search` source is designed to retrieve Amazon search result pages.
+The `/v1/scrape/amazon/search` endpoint is designed to retrieve Amazon search result pages, with paid placements marked.
 
-#### Query parameters
+**Query parameters**
 
-| Parameter                                                   | Description                                                                                                                                       | Default Value   |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-|  <mark style="background-color:green;">**`source`**</mark>  | Data source.                                             | `amazon_search` |
-| `domain`                                                    | Domain localization for Amazon. The full list of available domains can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/domain-locale).                           | `com`           |
-|  <mark style="background-color:green;">**`query`**</mark>   | UTF-encoded keyword                                                                                                                               | -               |
-| `start_page`                                                | Starting page number                                                                                                                              | `1`             |
-| `pages`                                                     | Number of pages to retrieve                                                                                                                       | `1`             |
-| `sort_by`                                                   | Sets the sorting type of search results. Available options: `"most_recent"`, `"price_low_to_high"`, `"price_high_to_low"`, `"featured"`, `"average_review"`, `"bestsellers"`.                | -               |
-| `refinements`                                               | A list of Amazon search refinement parameters for applying specific filters (e.g., brand, price range, features). Uses Amazon's internal parameter format such as `p_123:256097`.            | -               |
-| `geo_location`                                              | The _Deliver to_ location. See our guide to using this parameter [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/e-commerce-localization)**.**                               | -          |
-| `user_agent_type`                                           | Device type and browser. The full list can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/http-context-and-job-management/user-agent-type). | `desktop`       |
-| `render`                                                    | Enables JavaScript rendering. [**More info.**](https://developers.oxylabs.io/products/web-scraper-api/features/js-rendering-and-browser-control)                         | -               |
-| `callback_url`                                              | URL to your callback endpoint. [**More info**](https://developers.oxylabs.io/products/web-scraper-api/integration-methods/push-pull).                     | -               |
-| `parse`                                                     | `true` will return structured data.                                           | -               |
-| <p><code>context</code>:<br><code>category_id</code></p>    | Search for items in a particular browse node (product category).                                                                                  | -               |
-| <p><code>context</code>:<br><code>merchant_id</code></p>    | Search for items sold by a particular seller.                                                                                                     | -               |
+| Parameter | Description | Type |
+| --- | --- | --- |
+| <mark style="background-color:green;">**`query`**</mark>* | Search keyword. | string |
+| `category_id` | Restricts to an Amazon browse node. | string |
+| `check_empty_geo` | Fails the request instead of returning content that ignored location. | boolean |
+| `currency` | Currency to report prices in, e.g. `EUR`. | string |
+| `domain` | Marketplace TLD: `com`, `de`, `co.uk`, `co.jp`. | string |
+| `locale` | Interface language, e.g. `en_US`. | string |
+| `max_price` | Highest price to include, in the marketplace's currency. | integer |
+| `merchant_id` | Restricts to one seller's items. | string |
+| `min_price` | Lowest price to include, in the marketplace's currency. | integer |
+| `pages` | Consecutive pages to fetch from `start_page`. Each page is a separate fetch and charge. | integer |
+| `refinements` | Amazon's filter facets: brand, rating, Prime eligibility. Forwarded verbatim; values differ per marketplace. | array of strings |
+| `safe_search` | Amazon's content filter. | boolean |
+| `sort_by` | Amazon's own sort key, e.g. `price-asc-rank`, `review-rank`. Forwarded verbatim; values differ per marketplace. | string |
+| `start_page` | First results page. Default 1. | integer |
 
-&#x20;   <mark style="background-color:green;"></mark> - required parameter
+/* required parameter
 
-#### Python code example
+**Python code example**
 
-In the code example below, we make a request to retrieve product page for ASIN `3AA17D2BRD4YMT0X` on `amazon.nl` marketplace. In case the ASIN provided is a parent ASIN, we ask Amazon to return a product page of an automatically-selected variation.
+In the code example below, we search the amazon.nl marketplace for "adidas", retrieving 10 pages of results starting from page 11, filtered by browse node 16391843031 and seller 3AA17D2BRD4YMT0X.
 
 ```python
 import requests
@@ -184,24 +244,19 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_search',
-    'domain': 'nl',
     'query': 'adidas',
+    'domain': 'nl',
     'start_page': 11,
     'pages': 10,
-    'parse': True,
-    'context': [
-        {'key': 'category_id', 'value': 16391843031},
-        {'key': 'merchant_id', 'value':'3AA17D2BRD4YMT0X'}
-    ],
+    'category_id': '16391843031',
+    'merchant_id': '3AA17D2BRD4YMT0X',
+    'output': ['json'],
 }
 
-
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/search',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
@@ -209,31 +264,27 @@ response = requests.request(
 pprint(response.json())
 ```
 
-To see the response example with retrieved data, download [**this** **sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2Fyg8tdLTqrajAxhtjiuR5%2Famazon\_search.json?alt=media\&token=f02b1ceb-70f6-45cd-9f7c-7247196b2bd6) file in JSON format.
- 
 ### Product
 
-The `amazon_product` data source is designed to retrieve Amazon product pages.
+The `/v1/scrape/amazon/product` endpoint is designed to retrieve Amazon product pages, including the product's title, price, availability, rating, images and variants.
 
-#### Query parameters
+**Query parameters**
 
-| Parameter                                                       | Description                                                                                                                                                                                                                                                                | Default Value    |
-| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-|  <mark style="background-color:green;">**`source`**</mark>      | Data source.                                                                                                                                                                      | `amazon_product` |
-| `domain`                                                        | Domain localization for Amazon. The full list of available domains can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/domain-locale).                                                                                                                                                    | `com`            |
-|  <mark style="background-color:green;">**`query`**</mark>       | 10-symbol ASIN code                                                                                                                                                                                                                                                        | -                |
-| `geo_location`                                                  | The _Deliver to_ location. See our guide to using this parameter [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/e-commerce-localization)**.**                                                                                                                                                        | -                |
-| `user_agent_type`                                               | Device type and browser. The full list can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/http-context-and-job-management/user-agent-type).                                                                                                                          | `desktop`        |
-| `render`                                                        | Enables JavaScript rendering. [**More info.**](https://developers.oxylabs.io/products/web-scraper-api/features/js-rendering-and-browser-control)                                                                                                                                                 |                  |
-| `callback_url`                                                  | URL to your callback endpoint. [**More info**](https://developers.oxylabs.io/products/web-scraper-api/integration-methods/push-pull).                                                                                                                                              | -                |
-| `parse`                                                         | `true` will return structured data.                                                                                                                                                           | -                |
-| <p><code>context</code>:<br><code>autoselect_variant</code></p> | To get accurate pricing/buybox data, set this parameter to `true` (which tells us to append the `th=1&psc=1` URL parameters to the end of the product URL). To get an accurate representation of the parent ASIN's product page, omit this parameter or set it to `false`. | `false`          |
+| Parameter | Description | Type |
+| --- | --- | --- |
+| <mark style="background-color:green;">**`query`**</mark>* | ASIN, e.g. `B0935DN1BN`. Not a URL or title. | string |
+| `autoselect_variant` | Follows the listing's default variant instead of returning the bare parent listing. Set when a parent ASIN returns no price. | boolean |
+| `check_empty_geo` | Fails the request instead of returning content that ignored location. | boolean |
+| `currency` | Currency to report prices in, e.g. `EUR`. | string |
+| `domain` | Marketplace TLD: `com`, `de`, `co.uk`, `co.jp`. | string |
+| `locale` | Interface language, e.g. `en_US`. | string |
+| `safe_search` | Amazon's content filter. | boolean |
 
-&#x20; <mark style="background-color:green;"></mark> - required parameter
+/* required parameter
 
-#### Python code example
+**Python code example**
 
-In the code example below, we make a request to retrieve product page for ASIN `B09RX4KS1G`on `amazon.nl` marketplace. In case the ASIN provided is a parent ASIN, we ask Amazon to return a product page of an automatically-selected variation.
+In the code example below, we make a request to retrieve the product page for ASIN B09RX4KS1G on the amazon.nl marketplace. If the ASIN provided is a parent ASIN, `autoselect_variant` makes the scraper follow the listing's default variant.
 
 ```python
 import requests
@@ -242,104 +293,46 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_product',
-    'domain': 'nl',
     'query': 'B09RX4KS1G',
-    'parse': True,
-    'context': [
-    {
-      'key': 'autoselect_variant', 'value': True
-    }],
+    'domain': 'nl',
+    'autoselect_variant': True,
+    'output': ['json'],
 }
 
-
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/product',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
 # Print prettified response to stdout.
 pprint(response.json())
 ```
-
-To see the response example with retrieved data, download [**this** **sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2Fjj4ahNp1FpIqjY2JcSqz%2Famazon\_product.json?alt=media\&token=42016a49-9790-4671-9022-bb0feed79d1a) file in JSON format.
 
 ### Offer listing
 
-The `amazon_pricing` data source is designed to retrieve Amazon product offer listings.
+The `/v1/scrape/amazon/pricing` endpoint is designed to retrieve Amazon product offer listings, returning every offer on a listing from all sellers and conditions.
 
-#### Query parameters
+**Query parameters**
 
-| Parameter                                                   | Description                                                                                                                                       | Default Value    |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-|  <mark style="background-color:green;">**`source`**</mark>  | Data source.                                              | `amazon_pricing` |
-| `domain`                                                    | Domain localization for Amazon. The full list of available domains can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/domain-locale).                           | `com`          |
-|  <mark style="background-color:green;">**`query`**</mark>   | 10-symbol ASIN code                                                                                                                               | -                |
-| `start_page`                                                | Starting page number                                                                                                                              | `1`              |
-| `pages`                                                     | Number of pages to retrieve                                                                                                                       | `1`              |
-| `geo_location`                                              | The _Deliver to_ location. See our guide to using this parameter [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/e-commerce-localization).                                   | -          |
-| `user_agent_type`                                           | Device type and browser. The full list can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/http-context-and-job-management/user-agent-type). | `desktop`        |
-| `render`                                                    | Enables JavaScript rendering. [**More info.**](https://developers.oxylabs.io/products/web-scraper-api/features/js-rendering-and-browser-control)                         |                  |
-| `callback_url`                                              | URL to your callback endpoint. [**More info**](https://developers.oxylabs.io/products/web-scraper-api/integration-methods/push-pull).                     | -                |
-| `parse`                                                     | `true` will return structured data.                             | -                |
+| Parameter | Description | Type |
+| --- | --- | --- |
+| <mark style="background-color:green;">**`query`**</mark>* | ASIN whose offers to return. | string |
+| `check_empty_geo` | Fails the request instead of returning content that ignored location. | boolean |
+| `condition` | Offer condition to return, e.g. `used`. | string |
+| `currency` | Currency to report prices in, e.g. `EUR`. | string |
+| `domain` | Marketplace TLD: `com`, `de`, `co.uk`, `co.jp`. | string |
+| `locale` | Interface language, e.g. `en_US`. | string |
+| `pages` | Consecutive pages to fetch from `start_page`. Each page is a separate fetch and charge. | integer |
+| `safe_search` | Amazon's content filter. | boolean |
+| `start_page` | First results page. Default 1. | integer |
 
-&#x20;   <mark style="background-color:green;"></mark> - required parameter
+/* required parameter
 
-#### Python code example
+**Python code example**
 
-In the code examples below, we make a request to retrieve product offer listing page for ASIN `B09RX4KS1G` on `amazon.nl`&#x20; marketplace.
-
-```python
-import requests
-from pprint import pprint
-
-
-# Structure payload.
-payload = {
-    'source': 'amazon_pricing',
-    'domain': 'nl',
-    'query': 'B09RX4KS1G',
-    'parse': True,
-}
-
-
-# Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
-    json=payload,
-)
-
-# Print prettified response to stdout.
-pprint(response.json())
-```
-
-To see what the parsed output looks like, download [**this**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2FhGVtkmLp7gccwTLCJzLY%2Famazon\_pricing.json?alt=media\&token=a30a8253-225f-44c2-880b-850e94e23c21) JSON file.
-
-### Questions and Answers
-
-The `amazon_questions` data source is designed to retrieve any particular product's Questions & Answers pages.
-
-#### Query parameters
-
-| Parameter                                                   | Description                                                                                                                                       | Default Value      |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-|  <mark style="background-color:green;">**`source`**</mark>  | Data source.                                              | `amazon_questions` |
-| `domain`                                                    | Domain localization for Amazon. The full list of available domains can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/domain-locale).                           | `com`         |
-|  <mark style="background-color:green;">**`query`**</mark>   | 10-symbol ASIN code                                                                                                                               | -                  |
-| `geo_location`                                              | The _Deliver to_ location. See our guide to using this parameter [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/e-commerce-localization).                                   | -          |
-| `user_agent_type`                                           | Device type and browser. The full list can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/http-context-and-job-management/user-agent-type). | `desktop`          |
-| `render`                                                    | Enables JavaScript rendering. [**More info.**](https://developers.oxylabs.io/products/web-scraper-api/features/js-rendering-and-browser-control)****                         |                    |
-| `callback_url`                                              | URL to your callback endpoint. [**More info**](https://developers.oxylabs.io/products/web-scraper-api/integration-methods/push-pull).                     | -                  |
-| `parse`                                                     | `true` will return structured data.                   | -                  |
-
-&#x20;   <mark style="background-color:green;"></mark> - required parameter
-
-#### Python code example
+In the code example below, we make a request to retrieve the product offer listing page for ASIN B09RX4KS1G on the amazon.nl marketplace.
 
 ```python
 import requests
@@ -348,50 +341,45 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_questions',
-    'domain': 'nl',
     'query': 'B09RX4KS1G',
-    'parse': True,
+    'domain': 'nl',
+    'output': ['json'],
 }
 
-
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/pricing',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
 # Print prettified response to stdout.
 pprint(response.json())
 ```
-
-To see the response example with retrieved data, download this [**sample** **output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2F1i8qUTsaifrfTht9VdXK%2Famazon\_questions.json?alt=media\&token=a59d9850-d79b-40bc-a2a6-bdd802eafd6b) file in JSON format.
 
 ### Best Sellers
 
-The `amazon_bestsellers` data source is designed to retrieve Amazon Best Sellers pages.
+The `/v1/scrape/amazon/bestsellers` endpoint is designed to retrieve Amazon Best Sellers pages, returning the bestseller ranking for a category.
 
-#### Query parameters
+**Query parameters**
 
-| Parameter                                                   | Description                                                                                                                                       | Default Value        |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-|  <mark style="background-color:green;">**`source`**</mark>  | Data source.                                              | `amazon_bestsellers` |
-| `domain`                                                    | Domain localization for Amazon. The full list of available domains can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/domain-locale).                           | `com`                |
-| `query`                                                     | Department name. Example: `Clothing, Shoes & Jewelry`                                                                                             | -                    |
-| `start_page`                                                | Starting page number                                                                                                                              | `1`                  |
-| `pages`                                                     | Number of pages to retrieve                                                                                                                       | `1`                  |
-| `geo_location`                                              | The _Deliver to_ location. See our guide to using this parameter [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/e-commerce-localization).                                   | -                    |
-| `user_agent_type`                                           | Device type and browser. The full list can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/http-context-and-job-management/user-agent-type). | `desktop`            |
-| `render`                                                    | Enables JavaScript rendering. [**More info.**](https://developers.oxylabs.io/products/web-scraper-api/features/js-rendering-and-browser-control)                        |                      |
-| `callback_url`                                              | URL to your callback endpoint. [**More info**](https://developers.oxylabs.io/products/web-scraper-api/integration-methods/push-pull).                     | -                    |
-| `parse`                                                     | `true` will return structured data.                                                                                                               | -                    |
-| <p><code>context</code>:<br><code>category_id</code></p>    | Search for items in a particular browse node (product category).                                                                                  | -                    |
+| Parameter | Description | Type |
+| --- | --- | --- |
+| <mark style="background-color:green;">**`query`**</mark>* | Category or department name. Example: Clothing, Shoes & Jewelry. | string |
+| `category_id` | Restricts to an Amazon browse node. | string |
+| `check_empty_geo` | Fails the request instead of returning content that ignored location. | boolean |
+| `currency` | Currency to report prices in, e.g. `EUR`. | string |
+| `domain` | Marketplace TLD: `com`, `de`, `co.uk`, `co.jp`. | string |
+| `locale` | Interface language, e.g. `en_US`. | string |
+| `pages` | Consecutive pages to fetch from `start_page`. Each page is a separate fetch and charge. | integer |
+| `safe_search` | Amazon's content filter. | boolean |
+| `start_page` | First results page. Default 1. | integer |
 
-&#x20;   <mark style="background-color:green;"></mark> - required parameter
+/* required parameter
 
-#### Python code example
+**Python code example**
+
+In the code example below, we retrieve page 2 of the Best Sellers list for the "automotive" department, in browse node 82400031, on the amazon.de marketplace.
 
 ```python
 import requests
@@ -400,53 +388,44 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_bestsellers',
-    'domain': 'de',
     'query': 'automotive',
+    'domain': 'de',
     'start_page': 2,
-    'parse': True,
-    'context': [
-        {'key': 'category_id', 'value': 82400031},
-    ],
+    'category_id': '82400031',
+    'output': ['json'],
 }
 
-
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/bestsellers',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
 # Print prettified response to stdout.
 pprint(response.json())
 ```
-
-To see the response example with retrieved data, download this [**sample output**](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FiwDdoZGfMbUe5cRL2417%2Fuploads%2Frf2S2YKKlEEhu4cCoW6b%2Famazon\_bestsellers.json?alt=media\&token=6b4b3817-5a6e-4095-96b0-81d8d9d0883f) file in JSON format.
 
 ### Sellers
 
-The `amazon_sellers` data source is designed to retrieve Amazon Sellers pages.&#x20;
+The `/v1/scrape/amazon/sellers` endpoint is designed to retrieve Amazon Sellers pages, returning a seller's storefront.
 
-#### Query parameters
+**Query parameters**
 
-| Parameter                                                   | Description                                                                                                                                                                                                                                                                      | Default Value    |
-| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-|  <mark style="background-color:green;">**`source`**</mark>  | Data source.                                                                                                                                                                             | `amazon_sellers` |
-| `domain`                                                    | Domain localization for Amazon. The full list of available domains can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/domain-locale).                                                                                                                                                          | `com`            |
-|  <mark style="background-color:green;">**`query`**</mark>   | 13-character seller ID                                                                                                                                                                                                                                                           | -                |
-| `geo_location`                                              | The _Deliver to_ location. See our guide to using this parameter [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/localization/e-commerce-localization).                                                                                                                                                                  | -                |
-| `user_agent_type`                                           | Device type and browser. The full list can be found [**here**](https://developers.oxylabs.io/products/web-scraper-api/features/http-context-and-job-management/user-agent-type).                                                                                                                                | `desktop`        |
-| `render`                                                    | Enables JavaScript rendering. [**More info.**](https://developers.oxylabs.io/products/web-scraper-api/features/js-rendering-and-browser-control)                                                                                                                                                        |                  |
-| `callback_url`                                              | URL to your callback endpoint. [**More info**](https://developers.oxylabs.io/products/web-scraper-api/integration-methods/push-pull).                                                                                                                                                    | -                |
-| `parse`                                                     | `true` will return structured data. Please note that right now we only support parsed output for `desktop` device type. However, there is no apparent reason to get sellers pages with any other device type, as seller data is going to be exactly the same across all devices. | -                |
+| Parameter | Description | Type |
+| --- | --- | --- |
+| <mark style="background-color:green;">**`query`**</mark>* | Seller ID, e.g. `ABNP0A7Y0QWBN`. | string |
+| `check_empty_geo` | Fails the request instead of returning content that ignored location. | boolean |
+| `currency` | Currency to report prices in, e.g. `EUR`. | string |
+| `domain` | Marketplace TLD: `com`, `de`, `co.uk`, `co.jp`. | string |
+| `locale` | Interface language, e.g. `en_US`. | string |
+| `safe_search` | Amazon's content filter. | boolean |
 
-&#x20;   <mark style="background-color:green;"></mark> - required parameter
+/* required parameter
 
-#### Python code example
+**Python code example**
 
-In the code examples below, we make a request to retrieve the seller page for seller ID `ABNP0A7Y0QWBN` on `amazon.de` marketplace.
+In the code example below, we make a request to retrieve the seller page for seller ID ABNP0A7Y0QWBN on the amazon.de marketplace.
 
 ```python
 import requests
@@ -455,39 +434,89 @@ from pprint import pprint
 
 # Structure payload.
 payload = {
-    'source': 'amazon_sellers',
-    'domain': 'de',
     'query': 'ABNP0A7Y0QWBN',
-    'parse': True
+    'domain': 'de',
+    'output': ['json'],
 }
 
-
 # Get response.
-response = requests.request(
-    'POST',
-    'https://realtime.oxylabs.io/v1/queries',
-    auth=('user', 'pass1'),
+response = requests.post(
+    'https://webapi.oxylabs.io/v1/scrape/amazon/sellers',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'},  # Your API key goes here
     json=payload,
 )
 
 # Print prettified response to stdout.
 pprint(response.json())
 ```
-Check out our list of [Best Web Scraping Tools](https://medium.com/@oxylabs.io/top-12-best-web-scraping-tools-for-2025-ba5deb1b3851)
 
-Looking to scrape more other Amazon data? [Amazon ASIN Scraper](https://github.com/oxylabs/amazon-asin-scraper), [Handle Amazon CAPTCHA](https://github.com/oxylabs/how-to-handle-amazon-captcha), [How to Scrape Amazon Prices](https://github.com/oxylabs/how-to-scrape-amazon-prices), [Scraping Amazon Product Data](https://github.com/oxylabs/how-to-scrape-amazon-product-data)
+## Practical use cases
+
+Amazon data supports pricing, research and brand decisions. Each use case below maps to one or more of the endpoints above.
+
+| Use case | What you collect | Endpoint to use |
+| --- | --- | --- |
+| Price monitoring and dynamic pricing | Current prices and competing offers for your ASINs | `/product`, `/pricing` |
+| Competitor and seller analysis | Seller details and the listings competitors run | `/sellers`, `/search` |
+| Market and product research | Best sellers per category and search rankings | `/bestsellers`, `/search` |
+| Rating and brand reputation monitoring | Product ratings and listing details | `/product` |
+| Catalog enrichment | ASINs, titles, images and product details | `/product`, the free Amazon scraper |
+
+## Why choose Oxylabs
+
+Oxylabs Web API is built so you can scrape Amazon without maintaining scrapers, proxies or parsers.
+
+- **Pay for results, not attempts:** you pay only for successfully delivered results, with Amazon requests starting from $0.50 per 1,000 results ([see pricing](https://oxylabs.io/products/web-api/scrape/pricing)).
+- **Any Amazon marketplace:** get localized Amazon data from any marketplace, with proxies in 195 countries.
+- **Built-in proxy management:** a 177M+ rotating proxy pool, so you don't manage IPs yourself.
+- **Access handled for you:** CAPTCHA handling, JavaScript rendering and AI-driven fingerprinting are included.
+- **Flexible output and delivery:** choose JSON, Markdown, HTML or a screenshot, and get results in the response or in your own cloud storage bucket.
+- **Agent-ready:** connect directly to your AI agents with MCP support and Agent Skills.
+- **Support around the clock:** 24/7 support, trusted by 15,000+ clients globally.
+
+## FAQ
+
+### Is it legal to scrape Amazon?
+
+Scraping publicly available data is generally allowed, but the answer depends on your jurisdiction, the type of data you collect and how you use it. Respect Amazon's terms, avoid personal data and get legal advice for your specific project.
+
+### What data can I scrape from Amazon?
+
+You can collect public product data such as titles, prices, ASINs, images, offers, seller information and best seller lists. The free Amazon scraper returns title, URL, ASIN, image URL and price. The Web API returns structured JSON for product pages, search results, offers, sellers and best sellers, and can fetch any other Amazon page from its URL.
+
+### Should I use the free Amazon scraper or the Web API?
+
+Use the free tool for small, one-off jobs on a single department page. Choose the Oxylabs Web API when you need larger volumes, multiple marketplaces or reliable access without managing proxies.
+
+### How does the Web API deal with CAPTCHAs and blocks?
+
+The Web API handles CAPTCHAs, JavaScript rendering and proxy rotation for you, and uses AI-driven fingerprinting to improve success rates, so you send a request and get the result back.
+
+### Which Amazon marketplaces can I scrape?
+
+Set the `domain` parameter to choose a marketplace, such as `com`, `de`, `co.uk` or `co.jp`, and use `location` to set the delivery postal code. See the [Amazon API reference](https://developers.oxylabs.io/api-reference/dedicated-scrapers/commerce-scrapers#amazon) for all parameters.
+
+## Learn more
+
+Check out our list of [Best Web Scraping Tools](https://oxylabs.io/blog/best-free-web-scrapers).
+
+Looking to scrape more Amazon data? Try these guides:
+
+- [Amazon ASIN Scraper](https://github.com/oxylabs/amazon-asin-scraper)
+- [Handle Amazon CAPTCHA](https://github.com/oxylabs/how-to-bypass-amazon-captcha)
+- [How to Scrape Amazon Prices](https://github.com/oxylabs/how-to-scrape-amazon-prices)
+- [Scraping Amazon Product Data](https://github.com/oxylabs/how-to-scrape-amazon-product-data)
 
 ### Featured in Technical Communities
-We’re excited to see that our content and tools are being referenced by developers and technical writers across platforms!
 
-* [How To Web Scrape Amazon Using Python](https://medium.com/@simon.dalton.349/how-to-web-scrape-amazon-df92ddf11fc9)
+We're excited to see that our content and tools are being referenced by developers and technical writers across platforms!
 
-* [How to Handle Amazon CAPTCHA When Scraping](https://medium.com/@lambert.watts.809/how-to-bypass-amazon-captcha-when-scraping-fec20546abf9)
+- [How To Web Scrape Amazon Using Python](https://medium.com/@simon.dalton.349/how-to-web-scrape-amazon-df92ddf11fc9)
+- [How to Handle Amazon CAPTCHA When Scraping](https://medium.com/@lambert.watts.809/how-to-bypass-amazon-captcha-when-scraping-fec20546abf9)
+- [Best 10 Free Proxy Providers in 2025](https://medium.com/@lambert.watts.809/best-10-free-proxy-providers-dd78cd93fc04)
 
-* [Best 10 Free Proxy Providers in 2025](https://medium.com/@lambert.watts.809/best-10-free-proxy-providers-dd78cd93fc04)
+## Contact us
 
-### Contacts
-Email - support@oxylabs.io
-
-Drop a message - live chat, accessible via [Oxylabs Dashboard](https://dashboard.oxylabs.io/en/)
-
+- **Email:** [support@oxylabs.io](mailto:support@oxylabs.io)
+- **Live chat:** drop a message in the live chat, accessible via the [Oxylabs Dashboard](https://dashboard.oxylabs.io/en/)
+- **Community:** join us on [Discord](https://discord.gg/Pds3gBmKMH), watch on [YouTube](https://www.youtube.com/@oxylabs) and follow Oxylabs on [GitHub](https://github.com/oxylabs)
