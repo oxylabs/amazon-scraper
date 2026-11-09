@@ -1,4 +1,4 @@
-[![Amazon_scraper](https://github.com/oxylabs/amazon-scraper/blob/main/amazon-scraper-github-banner.png)](https://oxylabs.io/products/web-api/scrape/ecommerce/amazon) 
+[![Amazon_scraper](https://github.com/oxylabs/amazon-scraper/blob/main/amazon-scraper-github-banner.png)](https://oxylabs.io/products/web-api?utm_content=oxylabs-web-scraper-api&groupid=877) 
 
 <a href="https://oxylabs.io"><img src="https://img.shields.io/badge/🚀_Get_Started-FF6B35?style=for-the-badge" alt="Get started"></a>
 <a href="https://developers.oxylabs.io"><img src="https://img.shields.io/badge/📚_Documentation-4A90E2?style=for-the-badge" alt="Documentation"></a>
