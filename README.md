@@ -1,4 +1,4 @@
-[![Amazon_scraper](https://github.com/oxylabs/amazon-scraper/blob/main/1-Amazon-Scraper.png)](https://oxylabs.io/products/web-api/scrape?utm_source=github&utm_medium=referral&utm_content=web_api_waitinglist&groupid=877) 
+[![Amazon_scraper](https://github.com/oxylabs/amazon-scraper/blob/main/1-Amazon-Scraper.png)](https://oxylabs.io/products/web-api/scrape?utm_source=github&utm_medium=referral&utm_content=amazon-scraper&utm_campaign=banner&groupid=877) 
 
 <p align="left">
   <a href="https://dashboard.oxylabs.io"><img src="https://img.shields.io/badge/%F0%9F%9A%80_Get_Started-FF6B35?style=for-the-badge" alt="Get started"></a>
@@ -110,7 +110,7 @@ In case the code doesn't work or your project is of bigger scale, please refer t
 
 ## Scraping with Oxylabs Web API
 
-Alternatively, you can use Oxylabs Amazon Scraper API (part of [Web API](https://oxylabs.io/products/web-api/scrape/ecommerce/amazon)) to get publicly-available data from any page on Amazon (pricing, product information, etc.) with simple API requests.
+Alternatively, you can use Oxylabs Amazon Scraper API (part of [Web API](https://oxylabs.io/products/web-api/scrape/ecommerce/amazon?utm_source=github&utm_medium=referral&utm_content=amazon-scraper&groupid=877)) to get publicly-available data from any page on Amazon (pricing, product information, etc.) with simple API requests.
 
 This all-in-one solution is designed to handle Amazon's automated request management systems via fast-adapting infrastructure, which automates proxy rotation, web access management, and parsing to get real-time structured data. To start scraping any public website at scale, create a free account and claim $5 welcome credit [here](https://dashboard.oxylabs.io/).
 
@@ -468,7 +468,7 @@ Amazon data supports pricing, research and brand decisions. Each use case below 
 
 Oxylabs Web API is built so you can scrape Amazon without maintaining scrapers, proxies or parsers.
 
-- **Pay for results, not attempts:** you pay only for successfully delivered results, with Amazon requests starting from $0.50 per 1,000 results ([see pricing](https://oxylabs.io/products/web-api/scrape/pricing)).
+- **Pay for results, not attempts:** you pay only for successfully delivered results, with Amazon requests starting from $0.50 per 1,000 results ([see pricing](https://oxylabs.io/products/web-api/scrape/pricing?utm_source=github&utm_medium=referral&utm_content=amazon-scraper&groupid=877)).
 - **Any Amazon marketplace:** get localized Amazon data from any marketplace, with proxies in 195 countries.
 - **Built-in proxy management:** a 177M+ rotating proxy pool, so you don't manage IPs yourself.
 - **Access handled for you:** CAPTCHA handling, JavaScript rendering and AI-driven fingerprinting are included.
@@ -500,7 +500,7 @@ Set the `domain` parameter to choose a marketplace, such as `com`, `de`, `co.uk`
 
 ## Learn more
 
-Check out our list of [Best Web Scraping Tools](https://oxylabs.io/blog/best-free-web-scrapers).
+Check out our list of [Best Web Scraping Tools](https://oxylabs.io/blog/best-free-web-scrapers?utm_source=github&utm_medium=referral&utm_content=amazon-scraper&groupid=877).
 
 Looking to scrape more Amazon data? Try these guides:
 
