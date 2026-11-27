@@ -2,7 +2,7 @@
 
 <p align="left">
   <a href="https://dashboard.oxylabs.io"><img src="https://img.shields.io/badge/%F0%9F%9A%80_Get_Started-FF6B35?style=for-the-badge" alt="Get started"></a>
-  <a href="https://developers.oxylabs.io/products/web-api"><img src="https://img.shields.io/badge/%F0%9F%93%9A_Documentation-4A90E2?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://developers.oxylabs.io/products/web-api?utm_source=github&utm_medium=referral&utm_content=amazon-scraper&utm_campaign=banner&groupid=877"><img src="https://img.shields.io/badge/%F0%9F%93%9A_Documentation-4A90E2?style=for-the-badge" alt="Documentation"></a>
   <a href="https://dashboard.oxylabs.io"><img src="https://img.shields.io/badge/%F0%9F%93%8A_Dashboard-2EA44F?style=for-the-badge" alt="Dashboard"></a>
   <a href="https://discord.gg/Pds3gBmKMH"><img src="https://img.shields.io/badge/%F0%9F%92%AC_Discord-5865F2?style=for-the-badge" alt="Discord"></a>
   <a href="https://www.youtube.com/@oxylabs"><img src="https://img.shields.io/badge/%E2%96%B6%EF%B8%8F_YouTube-FF0000?style=for-the-badge" alt="YouTube"></a>
@@ -154,7 +154,7 @@ Here is a quick overview of all the available endpoints we support with Amazon:
 | `/v1/scrape/amazon/search`      | Search results for a search term of your choice.        | Yes                |
 | `/v1/scrape/amazon/sellers`.    | Seller information of a seller of your choice.          | Yes                |
 
-Besides the target-specific parameters in the sections below, every Amazon endpoint accepts these common parameters. See the full [Amazon API reference](https://developers.oxylabs.io/api-reference/dedicated-scrapers/commerce-scrapers#amazon) for details.
+Besides the target-specific parameters in the sections below, every Amazon endpoint accepts these common parameters. See the full [Amazon API reference](https://developers.oxylabs.io/api-reference/dedicated-scrapers/commerce-scrapers?utm_source=github&utm_medium=referral&utm_content=amazon-scraper&groupid=877#amazon) for details.
 
 | Parameter.      | Description                                | Type           |
 | --------------- | ------------------------------------------ | -------------- |
@@ -496,7 +496,7 @@ The Web API handles CAPTCHAs, JavaScript rendering and proxy rotation for you, a
 
 ### Which Amazon marketplaces can I scrape?
 
-Set the `domain` parameter to choose a marketplace, such as `com`, `de`, `co.uk` or `co.jp`, and use `location` to set the delivery postal code. See the [Amazon API reference](https://developers.oxylabs.io/api-reference/dedicated-scrapers/commerce-scrapers#amazon) for all parameters.
+Set the `domain` parameter to choose a marketplace, such as `com`, `de`, `co.uk` or `co.jp`, and use `location` to set the delivery postal code. See the [Amazon API reference](https://developers.oxylabs.io/api-reference/dedicated-scrapers/commerce-scrapers?utm_source=github&utm_medium=referral&utm_content=amazon-scraper&groupid=877#amazon) for all parameters.
 
 ## Learn more
 
